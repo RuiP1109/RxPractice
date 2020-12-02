@@ -1,0 +1,32 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def shared_pod
+  # Pods for RxPractice
+  pod 'ObjectMapper'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'RxDataSources', '~> 4.0'
+  pod 'RxAlamofire'
+  pod 'lottie-ios'
+  pod 'RealmSwift'
+end
+
+target 'RxPractice' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for RxPractice
+
+  shared_pod
+
+  target 'RxPracticeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'RxPracticeUITests' do
+    # Pods for testing
+  end
+
+end
