@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,21 @@
 		F6997073257759E20082C250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6997071257759E20082C250 /* LaunchScreen.storyboard */; };
 		F699707E257759E30082C250 /* RxPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699707D257759E30082C250 /* RxPracticeTests.swift */; };
 		F6997089257759E30082C250 /* RxPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6997088257759E30082C250 /* RxPracticeUITests.swift */; };
+		F69970C025775C3E0082C250 /* TF_ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69970BF25775C3E0082C250 /* TF_ButtonView.swift */; };
+		F69970C125775C3E0082C250 /* TF_ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69970BF25775C3E0082C250 /* TF_ButtonView.swift */; };
+		F69970C225775C3E0082C250 /* TF_ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69970BF25775C3E0082C250 /* TF_ButtonView.swift */; };
+		F69970CA25775C500082C250 /* TF_ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69970C925775C500082C250 /* TF_ButtonView.xib */; };
+		F69970CB25775C500082C250 /* TF_ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69970C925775C500082C250 /* TF_ButtonView.xib */; };
+		F69970CC25775C500082C250 /* TF_ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69970C925775C500082C250 /* TF_ButtonView.xib */; };
+		F69970D125775C670082C250 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69970D025775C670082C250 /* NibLoadable.swift */; };
+		F69970D225775C670082C250 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69970D025775C670082C250 /* NibLoadable.swift */; };
+		F69970D325775C670082C250 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69970D025775C670082C250 /* NibLoadable.swift */; };
+		F69970D925775E5B0082C250 /* TF_Btn_LBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69970D725775E5B0082C250 /* TF_Btn_LBViewController.swift */; };
+		F69970DA25775E5B0082C250 /* TF_Btn_LBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69970D725775E5B0082C250 /* TF_Btn_LBViewController.swift */; };
+		F69970DB25775E5B0082C250 /* TF_Btn_LBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69970D725775E5B0082C250 /* TF_Btn_LBViewController.swift */; };
+		F69970DC25775E5B0082C250 /* TF_Btn_LBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69970D825775E5B0082C250 /* TF_Btn_LBViewController.xib */; };
+		F69970DD25775E5B0082C250 /* TF_Btn_LBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69970D825775E5B0082C250 /* TF_Btn_LBViewController.xib */; };
+		F69970DE25775E5B0082C250 /* TF_Btn_LBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F69970D825775E5B0082C250 /* TF_Btn_LBViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +76,11 @@
 		F6997084257759E30082C250 /* RxPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6997088257759E30082C250 /* RxPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPracticeUITests.swift; sourceTree = "<group>"; };
 		F699708A257759E30082C250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F69970BF25775C3E0082C250 /* TF_ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TF_ButtonView.swift; sourceTree = "<group>"; };
+		F69970C925775C500082C250 /* TF_ButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TF_ButtonView.xib; sourceTree = "<group>"; };
+		F69970D025775C670082C250 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		F69970D725775E5B0082C250 /* TF_Btn_LBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TF_Btn_LBViewController.swift; sourceTree = "<group>"; };
+		F69970D825775E5B0082C250 /* TF_Btn_LBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TF_Btn_LBViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +131,6 @@
 				CEA53FF7C027DF749AB2D2A0 /* Pods-RxPracticeTests.debug.xcconfig */,
 				A11CE9BE062E851C4A235008 /* Pods-RxPracticeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,6 +161,8 @@
 			children = (
 				F6997066257759E10082C250 /* AppDelegate.swift */,
 				F6997068257759E10082C250 /* SceneDelegate.swift */,
+				F69970BB25775BEC0082C250 /* Extension */,
+				F69970BC25775BF50082C250 /* TextField */,
 				F699706A257759E10082C250 /* ViewController.swift */,
 				F699706C257759E10082C250 /* Main.storyboard */,
 				F699706F257759E20082C250 /* Assets.xcassets */,
@@ -167,6 +188,41 @@
 				F699708A257759E30082C250 /* Info.plist */,
 			);
 			path = RxPracticeUITests;
+			sourceTree = "<group>";
+		};
+		F69970BB25775BEC0082C250 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F69970D025775C670082C250 /* NibLoadable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F69970BC25775BF50082C250 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				F69970BD25775C040082C250 /* View */,
+				F69970BE25775C0D0082C250 /* ViewController */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		F69970BD25775C040082C250 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F69970BF25775C3E0082C250 /* TF_ButtonView.swift */,
+				F69970C925775C500082C250 /* TF_ButtonView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F69970BE25775C0D0082C250 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F69970D725775E5B0082C250 /* TF_Btn_LBViewController.swift */,
+				F69970D825775E5B0082C250 /* TF_Btn_LBViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +333,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69970DC25775E5B0082C250 /* TF_Btn_LBViewController.xib in Resources */,
 				F6997073257759E20082C250 /* LaunchScreen.storyboard in Resources */,
 				F6997070257759E20082C250 /* Assets.xcassets in Resources */,
+				F69970CA25775C500082C250 /* TF_ButtonView.xib in Resources */,
 				F699706E257759E10082C250 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +345,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69970CB25775C500082C250 /* TF_ButtonView.xib in Resources */,
+				F69970DD25775E5B0082C250 /* TF_Btn_LBViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +354,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69970CC25775C500082C250 /* TF_ButtonView.xib in Resources */,
+				F69970DE25775E5B0082C250 /* TF_Btn_LBViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +470,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F699706B257759E10082C250 /* ViewController.swift in Sources */,
+				F69970D925775E5B0082C250 /* TF_Btn_LBViewController.swift in Sources */,
 				F6997067257759E10082C250 /* AppDelegate.swift in Sources */,
+				F69970C025775C3E0082C250 /* TF_ButtonView.swift in Sources */,
+				F69970D125775C670082C250 /* NibLoadable.swift in Sources */,
 				F6997069257759E10082C250 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +482,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69970D225775C670082C250 /* NibLoadable.swift in Sources */,
+				F69970DA25775E5B0082C250 /* TF_Btn_LBViewController.swift in Sources */,
+				F69970C125775C3E0082C250 /* TF_ButtonView.swift in Sources */,
 				F699707E257759E30082C250 /* RxPracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +493,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69970D325775C670082C250 /* NibLoadable.swift in Sources */,
+				F69970DB25775E5B0082C250 /* TF_Btn_LBViewController.swift in Sources */,
+				F69970C225775C3E0082C250 /* TF_ButtonView.swift in Sources */,
 				F6997089257759E30082C250 /* RxPracticeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
