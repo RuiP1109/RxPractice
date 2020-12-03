@@ -7,12 +7,16 @@
 
 import UIKit
 
+enum TFViewControllerList : CaseIterable{
+    case TF_Btn_LB, TF_Btn_Table
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var mTableView: UITableView!
     
     var mSection : [String] = ["TextField"]
-    var mArray : [String] = ["TF_Btn_LB", "TF_Btn_Table", ]
+    var mArray : [String] = ["TF_Btn_LB", "TF_Btn_Table"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +37,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         return mSection[section]
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mArray.count
+        return TFViewControllerList.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,7 +49,15 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        self.navigationController?.pushViewController(TF_Btn_LBViewController(), animated: true)
+        var viewCon : UIViewController
+        
+        if indexPath.row == 0 {
+            viewCon = TF_Btn_LBViewController()
+        }else{
+            viewCon = TF_Btn_TableViewController()
+        }
+        
+        self.navigationController?.pushViewController(viewCon, animated: true)
     }
     
 }
