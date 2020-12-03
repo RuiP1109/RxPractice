@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import RxSwift
 
-class TF_Btn_LBViewController: C_ViewController {
+class TF_Btn_LBViewController: UIViewController {
     
     @IBOutlet weak var mSearchView: TF_ButtonView!
     @IBOutlet weak var mLabel: UILabel!
@@ -21,7 +22,6 @@ class TF_Btn_LBViewController: C_ViewController {
     func bind(){
         mSearchView.rx.tapConfirmBtn
             .bind { [weak self] title in
-                print("💙tapConfirmBtn : \(title)")
                 self?.mLabel.text = title
             }
     }
