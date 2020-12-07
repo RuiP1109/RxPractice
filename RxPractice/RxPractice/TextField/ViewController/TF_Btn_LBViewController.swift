@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class TF_Btn_LBViewController: UIViewController {
+class TF_Btn_LBViewController: C_ViewController {
     
     @IBOutlet weak var mSearchView: TF_ButtonView!
     @IBOutlet weak var mLabel: UILabel!
