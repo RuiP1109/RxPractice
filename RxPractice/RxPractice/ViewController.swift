@@ -8,20 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var mTableView: UITableView!
     
     var mSection : [String] = ["TextField"]
-    var mArray : [String] = ["TF_Btn_LB", "TF_Btn_Table", ]
+    var mArray : [String] = ["TF_Btn_LB", "TF_Btn_Table"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         mTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-
+        
     }
-
+    
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
@@ -44,8 +44,15 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        var viewCon : UIViewController
         
-        self.navigationController?.pushViewController(TF_Btn_LBViewController(), animated: true)
+        if indexPath.row == 0 {
+            viewCon = TF_Btn_LBViewController()
+        }else{
+            viewCon = TF_Btn_TableViewController()
+        }
+        
+        self.navigationController?.pushViewController(viewCon, animated: true)
     }
     
 }

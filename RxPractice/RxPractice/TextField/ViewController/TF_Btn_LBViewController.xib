@@ -21,14 +21,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uqi-6L-5FH" customClass="TF_ButtonView" customModule="RxPractice" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="414" height="120"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="aga-G2-7db"/>
+                        <constraint firstAttribute="height" constant="60" id="aga-G2-7db"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUe-0X-Ag2">
-                    <rect key="frame" x="24" y="194" width="366" height="20.5"/>
+                    <rect key="frame" x="24" y="164" width="366" height="50.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
             <constraints>
                 <constraint firstItem="Uqi-6L-5FH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="A5R-o6-h4o"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wUe-0X-Ag2" secondAttribute="trailing" constant="24" id="EnD-nh-xeX"/>
-                <constraint firstItem="wUe-0X-Ag2" firstAttribute="top" secondItem="Uqi-6L-5FH" secondAttribute="bottom" constant="30" id="WRx-lh-amC"/>
+                <constraint firstItem="wUe-0X-Ag2" firstAttribute="top" secondItem="Uqi-6L-5FH" secondAttribute="bottom" constant="60" id="WRx-lh-amC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uqi-6L-5FH" secondAttribute="trailing" id="apg-fy-yLy"/>
                 <constraint firstItem="Uqi-6L-5FH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="exo-ne-Wfz"/>
                 <constraint firstItem="wUe-0X-Ag2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="lM9-gm-wFE"/>
