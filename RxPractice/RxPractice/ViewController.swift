@@ -11,8 +11,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mTableView: UITableView!
     
-    var mSection : [String] = ["TextField"]
-    var mArray : [String] = ["TF_Btn_LB", "TF_Btn_Table"]
+    var mSectionList = [["section" : "TextField" , "list" : ["TF_Btn_LB", "TF_Btn_Table"]],
+                        ["section" : "ToyPractice" , "list" : ["Memo"]]]
+    
+//    var mSection : [String] = ["TextField"]
+//    var mArray : [String] = ["TF_Btn_LB", "TF_Btn_Table"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,31 +29,51 @@ class ViewController: UIViewController {
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return mSection.count
+        return mSectionList.count
+//        return mSection.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return mSection[section]
+        guard let title = mSectionList[section]["section"] as? String else{
+            return "No Title"
+        }
+        
+        return title
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mArray.count
+        guard let list = mSectionList[section]["list"] as? Array<Any> else{
+            return 0
+        }
+
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
-        cell.textLabel?.text = mArray[indexPath.row]
+        
+        guard let list = mSectionList[indexPath.section]["list"] as? Array<String> else{
+            return cell
+        }
+        
+        cell.textLabel?.text = list[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         var viewCon : UIViewController
         
-        if indexPath.row == 0 {
-            viewCon = TF_Btn_LBViewController()
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                viewCon = TF_Btn_LBViewController()
+            }else{
+                viewCon = TF_Btn_TableViewController()
+            }
         }else{
-            viewCon = TF_Btn_TableViewController()
+            viewCon = MemoMainViewController()
         }
+        
         
         self.navigationController?.pushViewController(viewCon, animated: true)
     }

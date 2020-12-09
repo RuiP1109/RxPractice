@@ -15,6 +15,9 @@ class TF_Btn_LBViewController: C_ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setNavigationBarTitle(text: "TF_Btn_Lb", offsetY: 30)
+        
         bind()
         // Do any additional setup after loading the view.
     }
