@@ -19,11 +19,15 @@ class MemoAddViewController: C_ViewController {
     
     weak var delegate : MemoAddViewControllerDelegate?
 
-    private lazy var memoMainViewModel = MemoMainViewModel()
+    private lazy var memoMainViewModel = MemoMainViewModel(parent: self)
     
     init(delegate : MemoAddViewControllerDelegate) {
         super.init()
         self.delegate = delegate
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -48,7 +52,7 @@ class MemoAddViewController: C_ViewController {
             realm.add(detailData)
         }
         
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

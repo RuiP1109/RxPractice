@@ -12,7 +12,7 @@ import RealmSwift
 class MemoMainViewController: C_ViewController {
     
     @IBOutlet weak var mTableView: UITableView!
-    private lazy var memoMainViewModel = MemoMainViewModel()
+    private lazy var memoMainViewModel = MemoMainViewModel(parent: self)
     var disposeBag = DisposeBag()
     
     var notificationToken: NotificationToken?
@@ -47,7 +47,8 @@ class MemoMainViewController: C_ViewController {
     }
     
     @IBAction func mAddBtnPressed(_ sender: UIButton) {
-        navigationController?.pushViewController(MemoAddViewController(), animated: true)
+        memoMainViewModel.pushAddViewCon()
+//        navigationController?.pushViewController(MemoAddViewController(delegate: self), animated: true)
     }
     
     
@@ -69,7 +70,9 @@ extension MemoMainViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        navigationController?.pushViewController(MemoAddViewController(), animated: true)
+        memoMainViewModel.pushAddViewCon()
+        
+//        navigationController?.pushViewController(MemoAddViewController(), animated: true)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

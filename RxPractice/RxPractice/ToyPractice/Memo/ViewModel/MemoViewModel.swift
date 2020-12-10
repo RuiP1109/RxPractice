@@ -11,6 +11,8 @@ import RealmSwift
 
 class MemoMainViewModel{
     
+    private weak var parent: UIViewController?
+    
     fileprivate var listModelPublishSubject = PublishSubject<Array<Any>>()
     fileprivate var deletePublishSubject = PublishSubject<Int>()
     fileprivate var isUpdatePublishSubject = PublishSubject<Bool>()
@@ -18,7 +20,8 @@ class MemoMainViewModel{
     fileprivate var realm: Realm!
     fileprivate var notificationToken: NotificationToken?
     
-    init() {
+    init(parent : UIViewController?) {
+        self.parent = parent
         realm = try! Realm()
         bind()
     }
@@ -54,6 +57,11 @@ class MemoMainViewModel{
         isUpdatePublishSubject.onNext(true)
     }
     
+    func pushAddViewCon(){
+        let viewCon = MemoAddViewController.init(delegate: self)
+        parent?.present(viewCon, animated: true, completion: nil)
+    }
+    
 }
 
 extension MemoMainViewModel : MemoAddViewControllerDelegate{
@@ -63,7 +71,7 @@ extension MemoMainViewModel : MemoAddViewControllerDelegate{
         data.content = content
         
         try! realm.write {
-            realm.add(detailData)
+            realm.add(data)
         }
     }
 }
