@@ -44,7 +44,7 @@ class TF_Btn_TableViewController: C_ViewController {
         try! realm.write {
             realm.add(SearchHistoryObject(value: ["searchText" : text]))
         }
-        mTableView.reloadData()
+//        mTableView.reloadData()
     }
     
     
@@ -56,6 +56,7 @@ class TF_Btn_TableViewController: C_ViewController {
     
     
 }
+
 extension TF_Btn_TableViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

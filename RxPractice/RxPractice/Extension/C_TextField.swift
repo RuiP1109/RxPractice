@@ -25,7 +25,6 @@ class C_TextField: UITextField {
         }
     }
     
-    
     open var lineHeight : CGFloat = CGFloat(1.0) {
         didSet{
             border.frame = CGRect(x: 0, y: self.frame.size.height - lineHeight, width:  self.frame.size.width, height: self.frame.size.height)
@@ -37,6 +36,7 @@ class C_TextField: UITextField {
         //  some initialisation for init with frame
         setupUI()
     }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupUI()
@@ -75,5 +75,13 @@ class C_TextField: UITextField {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         border.borderColor = lineColor.cgColor
+    }
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 30, dy: 0)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 30, dy: 0)
     }
 }

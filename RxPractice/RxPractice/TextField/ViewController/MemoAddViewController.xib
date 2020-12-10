@@ -20,32 +20,54 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EzJ-P8-taf" customClass="C_TextField" customModule="RxPractice" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="제목을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EzJ-P8-taf" customClass="C_TextField" customModule="RxPractice" customModuleProvider="target">
                     <rect key="frame" x="24" y="74" width="366" height="60"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="VS9-0u-EPb"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Ze-lM-tSg">
-                    <rect key="frame" x="24" y="164" width="366" height="698"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Ze-lM-tSg" customClass="C_TextView" customModule="RxPractice" customModuleProvider="target">
+                    <rect key="frame" x="24" y="164" width="366" height="668"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69r-aJ-2Fo">
+                    <rect key="frame" x="339" y="787" width="60" height="60"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="L0x-WT-j7q"/>
+                        <constraint firstAttribute="height" constant="60" id="XO9-T3-o9p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                    <state key="normal" title="저장">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="mSaveBtnPressed:" destination="-1" eventType="touchUpInside" id="uge-Cn-Twn"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.7631834267299521" green="1" blue="0.85205560443256034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" systemColor="systemIndigoColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="69r-aJ-2Fo" secondAttribute="trailing" constant="15" id="91b-b8-sav"/>
                 <constraint firstItem="EzJ-P8-taf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="LY3-k7-V5T"/>
                 <constraint firstItem="EzJ-P8-taf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="SWb-5v-GP7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="69r-aJ-2Fo" secondAttribute="bottom" constant="15" id="VND-VQ-nlu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EzJ-P8-taf" secondAttribute="trailing" constant="24" id="XlG-qw-P3T"/>
                 <constraint firstItem="4Ze-lM-tSg" firstAttribute="top" secondItem="EzJ-P8-taf" secondAttribute="bottom" constant="30" id="aBS-Hi-s1Y"/>
                 <constraint firstItem="4Ze-lM-tSg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="fKW-b6-xuK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4Ze-lM-tSg" secondAttribute="bottom" id="jIa-a3-TLX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4Ze-lM-tSg" secondAttribute="bottom" constant="30" id="jIa-a3-TLX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Ze-lM-tSg" secondAttribute="trailing" constant="24" id="njj-rh-LYx"/>
             </constraints>
             <point key="canvasLocation" x="-151" y="64"/>
@@ -57,6 +79,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

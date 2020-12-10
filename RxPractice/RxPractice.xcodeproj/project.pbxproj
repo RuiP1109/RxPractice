@@ -57,6 +57,18 @@
 		F6C78FB22580B115000EEF66 /* C_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FB12580B115000EEF66 /* C_TextField.swift */; };
 		F6C78FB32580B115000EEF66 /* C_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FB12580B115000EEF66 /* C_TextField.swift */; };
 		F6C78FB42580B115000EEF66 /* C_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FB12580B115000EEF66 /* C_TextField.swift */; };
+		F6C78FCD2581B8D3000EEF66 /* C_TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FCC2581B8D3000EEF66 /* C_TextView.swift */; };
+		F6C78FCE2581B8D3000EEF66 /* C_TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FCC2581B8D3000EEF66 /* C_TextView.swift */; };
+		F6C78FCF2581B8D3000EEF66 /* C_TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FCC2581B8D3000EEF66 /* C_TextView.swift */; };
+		F6C78FD52581BD97000EEF66 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FD42581BD97000EEF66 /* MemoModel.swift */; };
+		F6C78FD62581BD97000EEF66 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FD42581BD97000EEF66 /* MemoModel.swift */; };
+		F6C78FD72581BD97000EEF66 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FD42581BD97000EEF66 /* MemoModel.swift */; };
+		F6C78FE02581BED5000EEF66 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */; };
+		F6C78FE12581BED5000EEF66 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */; };
+		F6C78FE22581BED5000EEF66 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */; };
+		F6C7900C2581EBE6000EEF66 /* C_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7900B2581EBE6000EEF66 /* C_Button.swift */; };
+		F6C7900D2581EBE6000EEF66 /* C_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7900B2581EBE6000EEF66 /* C_Button.swift */; };
+		F6C7900E2581EBE6000EEF66 /* C_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7900B2581EBE6000EEF66 /* C_Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +125,10 @@
 		F6C78FA62580AEB2000EEF66 /* MemoAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoAddViewController.swift; path = RxPractice/TextField/ViewController/MemoAddViewController.swift; sourceTree = SOURCE_ROOT; };
 		F6C78FA72580AEB2000EEF66 /* MemoAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MemoAddViewController.xib; path = RxPractice/TextField/ViewController/MemoAddViewController.xib; sourceTree = SOURCE_ROOT; };
 		F6C78FB12580B115000EEF66 /* C_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_TextField.swift; sourceTree = "<group>"; };
+		F6C78FCC2581B8D3000EEF66 /* C_TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_TextView.swift; sourceTree = "<group>"; };
+		F6C78FD42581BD97000EEF66 /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
+		F6C7900B2581EBE6000EEF66 /* C_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,7 +243,9 @@
 			isa = PBXGroup;
 			children = (
 				F6C78F27257DB994000EEF66 /* C_ViewController.swift */,
+				F6C7900B2581EBE6000EEF66 /* C_Button.swift */,
 				F6C78FB12580B115000EEF66 /* C_TextField.swift */,
+				F6C78FCC2581B8D3000EEF66 /* C_TextView.swift */,
 				F69970D025775C670082C250 /* NibLoadable.swift */,
 			);
 			path = Extension;
@@ -273,6 +291,8 @@
 		F6C78F8A25808954000EEF66 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				F6C78FD32581BD77000EEF66 /* Model */,
+				F6C78FDE2581BEB9000EEF66 /* ViewModel */,
 				F6C78F8B25808960000EEF66 /* ViewController */,
 			);
 			path = Memo;
@@ -287,6 +307,22 @@
 				F6C78FA72580AEB2000EEF66 /* MemoAddViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F6C78FD32581BD77000EEF66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6C78FD42581BD97000EEF66 /* MemoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6C78FDE2581BEB9000EEF66 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,10 +583,14 @@
 				F6997067257759E10082C250 /* AppDelegate.swift in Sources */,
 				F6C78FB22580B115000EEF66 /* C_TextField.swift in Sources */,
 				F69970C025775C3E0082C250 /* TF_ButtonView.swift in Sources */,
+				F6C78FD52581BD97000EEF66 /* MemoModel.swift in Sources */,
 				F6C78FA82580AEB2000EEF66 /* MemoAddViewController.swift in Sources */,
 				F6C78F77257DC99E000EEF66 /* TF_Btn_TableViewController.swift in Sources */,
+				F6C78FE02581BED5000EEF66 /* MemoViewModel.swift in Sources */,
 				F6C78F8E25808980000EEF66 /* MemoMainViewController.swift in Sources */,
 				F6C78F28257DB994000EEF66 /* C_ViewController.swift in Sources */,
+				F6C7900C2581EBE6000EEF66 /* C_Button.swift in Sources */,
+				F6C78FCD2581B8D3000EEF66 /* C_TextView.swift in Sources */,
 				F69970D125775C670082C250 /* NibLoadable.swift in Sources */,
 				F6997069257759E10082C250 /* SceneDelegate.swift in Sources */,
 			);
@@ -560,13 +600,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C78FE12581BED5000EEF66 /* MemoViewModel.swift in Sources */,
 				F6C78F78257DC99E000EEF66 /* TF_Btn_TableViewController.swift in Sources */,
+				F6C7900D2581EBE6000EEF66 /* C_Button.swift in Sources */,
 				F69970D225775C670082C250 /* NibLoadable.swift in Sources */,
 				F6C78FB32580B115000EEF66 /* C_TextField.swift in Sources */,
 				F6C78F8F25808980000EEF66 /* MemoMainViewController.swift in Sources */,
 				F69970DA25775E5B0082C250 /* TF_Btn_LBViewController.swift in Sources */,
 				F6C78FA92580AEB2000EEF66 /* MemoAddViewController.swift in Sources */,
 				F6C78F29257DB994000EEF66 /* C_ViewController.swift in Sources */,
+				F6C78FCE2581B8D3000EEF66 /* C_TextView.swift in Sources */,
+				F6C78FD62581BD97000EEF66 /* MemoModel.swift in Sources */,
 				F69970C125775C3E0082C250 /* TF_ButtonView.swift in Sources */,
 				F699707E257759E30082C250 /* RxPracticeTests.swift in Sources */,
 			);
@@ -576,13 +620,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C78FE22581BED5000EEF66 /* MemoViewModel.swift in Sources */,
 				F6C78F79257DC99E000EEF66 /* TF_Btn_TableViewController.swift in Sources */,
+				F6C7900E2581EBE6000EEF66 /* C_Button.swift in Sources */,
 				F69970D325775C670082C250 /* NibLoadable.swift in Sources */,
 				F6C78FB42580B115000EEF66 /* C_TextField.swift in Sources */,
 				F6C78F9025808980000EEF66 /* MemoMainViewController.swift in Sources */,
 				F69970DB25775E5B0082C250 /* TF_Btn_LBViewController.swift in Sources */,
 				F6C78FAA2580AEB2000EEF66 /* MemoAddViewController.swift in Sources */,
 				F6C78F2A257DB994000EEF66 /* C_ViewController.swift in Sources */,
+				F6C78FCF2581B8D3000EEF66 /* C_TextView.swift in Sources */,
+				F6C78FD72581BD97000EEF66 /* MemoModel.swift in Sources */,
 				F69970C225775C3E0082C250 /* TF_ButtonView.swift in Sources */,
 				F6997089257759E30082C250 /* RxPracticeUITests.swift in Sources */,
 			);
