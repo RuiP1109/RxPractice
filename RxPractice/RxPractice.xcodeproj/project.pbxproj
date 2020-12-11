@@ -63,12 +63,15 @@
 		F6C78FD52581BD97000EEF66 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FD42581BD97000EEF66 /* MemoModel.swift */; };
 		F6C78FD62581BD97000EEF66 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FD42581BD97000EEF66 /* MemoModel.swift */; };
 		F6C78FD72581BD97000EEF66 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FD42581BD97000EEF66 /* MemoModel.swift */; };
-		F6C78FE02581BED5000EEF66 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */; };
-		F6C78FE12581BED5000EEF66 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */; };
-		F6C78FE22581BED5000EEF66 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */; };
+		F6C78FE02581BED5000EEF66 /* MemoMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FDF2581BED5000EEF66 /* MemoMainViewModel.swift */; };
+		F6C78FE12581BED5000EEF66 /* MemoMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FDF2581BED5000EEF66 /* MemoMainViewModel.swift */; };
+		F6C78FE22581BED5000EEF66 /* MemoMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C78FDF2581BED5000EEF66 /* MemoMainViewModel.swift */; };
 		F6C7900C2581EBE6000EEF66 /* C_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7900B2581EBE6000EEF66 /* C_Button.swift */; };
 		F6C7900D2581EBE6000EEF66 /* C_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7900B2581EBE6000EEF66 /* C_Button.swift */; };
 		F6C7900E2581EBE6000EEF66 /* C_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7900B2581EBE6000EEF66 /* C_Button.swift */; };
+		F6C7906825830A52000EEF66 /* MemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7906725830A52000EEF66 /* MemoDetailViewModel.swift */; };
+		F6C7906925830A52000EEF66 /* MemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7906725830A52000EEF66 /* MemoDetailViewModel.swift */; };
+		F6C7906A25830A52000EEF66 /* MemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C7906725830A52000EEF66 /* MemoDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +130,9 @@
 		F6C78FB12580B115000EEF66 /* C_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_TextField.swift; sourceTree = "<group>"; };
 		F6C78FCC2581B8D3000EEF66 /* C_TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_TextView.swift; sourceTree = "<group>"; };
 		F6C78FD42581BD97000EEF66 /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
-		F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
+		F6C78FDF2581BED5000EEF66 /* MemoMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoMainViewModel.swift; sourceTree = "<group>"; };
 		F6C7900B2581EBE6000EEF66 /* C_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C_Button.swift; sourceTree = "<group>"; };
+		F6C7906725830A52000EEF66 /* MemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,7 +324,8 @@
 		F6C78FDE2581BEB9000EEF66 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F6C78FDF2581BED5000EEF66 /* MemoViewModel.swift */,
+				F6C78FDF2581BED5000EEF66 /* MemoMainViewModel.swift */,
+				F6C7906725830A52000EEF66 /* MemoDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -579,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F699706B257759E10082C250 /* ViewController.swift in Sources */,
+				F6C7906825830A52000EEF66 /* MemoDetailViewModel.swift in Sources */,
 				F69970D925775E5B0082C250 /* TF_Btn_LBViewController.swift in Sources */,
 				F6997067257759E10082C250 /* AppDelegate.swift in Sources */,
 				F6C78FB22580B115000EEF66 /* C_TextField.swift in Sources */,
@@ -586,7 +592,7 @@
 				F6C78FD52581BD97000EEF66 /* MemoModel.swift in Sources */,
 				F6C78FA82580AEB2000EEF66 /* MemoAddViewController.swift in Sources */,
 				F6C78F77257DC99E000EEF66 /* TF_Btn_TableViewController.swift in Sources */,
-				F6C78FE02581BED5000EEF66 /* MemoViewModel.swift in Sources */,
+				F6C78FE02581BED5000EEF66 /* MemoMainViewModel.swift in Sources */,
 				F6C78F8E25808980000EEF66 /* MemoMainViewController.swift in Sources */,
 				F6C78F28257DB994000EEF66 /* C_ViewController.swift in Sources */,
 				F6C7900C2581EBE6000EEF66 /* C_Button.swift in Sources */,
@@ -600,7 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C78FE12581BED5000EEF66 /* MemoViewModel.swift in Sources */,
+				F6C78FE12581BED5000EEF66 /* MemoMainViewModel.swift in Sources */,
 				F6C78F78257DC99E000EEF66 /* TF_Btn_TableViewController.swift in Sources */,
 				F6C7900D2581EBE6000EEF66 /* C_Button.swift in Sources */,
 				F69970D225775C670082C250 /* NibLoadable.swift in Sources */,
@@ -613,6 +619,7 @@
 				F6C78FD62581BD97000EEF66 /* MemoModel.swift in Sources */,
 				F69970C125775C3E0082C250 /* TF_ButtonView.swift in Sources */,
 				F699707E257759E30082C250 /* RxPracticeTests.swift in Sources */,
+				F6C7906925830A52000EEF66 /* MemoDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,7 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6C78FE22581BED5000EEF66 /* MemoViewModel.swift in Sources */,
+				F6C78FE22581BED5000EEF66 /* MemoMainViewModel.swift in Sources */,
 				F6C78F79257DC99E000EEF66 /* TF_Btn_TableViewController.swift in Sources */,
 				F6C7900E2581EBE6000EEF66 /* C_Button.swift in Sources */,
 				F69970D325775C670082C250 /* NibLoadable.swift in Sources */,
@@ -633,6 +640,7 @@
 				F6C78FD72581BD97000EEF66 /* MemoModel.swift in Sources */,
 				F69970C225775C3E0082C250 /* TF_ButtonView.swift in Sources */,
 				F6997089257759E30082C250 /* RxPracticeUITests.swift in Sources */,
+				F6C7906A25830A52000EEF66 /* MemoDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

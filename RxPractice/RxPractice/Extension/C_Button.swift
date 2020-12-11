@@ -35,7 +35,7 @@ class C_Button: UIButton {
 }
 
 //extension Reactive where Base: C_Button{
-//    
+//
 //    var tapConfirmBtn: Observable<String?> {
 ////        return self.base.tapConfirmBtnPublishSubject.asObserver()
 //    }

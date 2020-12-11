@@ -6,30 +6,12 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class C_TextField: UITextField {
-
-    let border = CALayer()
-    var maxLength = 100
-    var validLength = 100
     
-    open var lineColor : UIColor = .lightGray {
-        didSet{
-            border.borderColor = lineColor.cgColor
-        }
-    }
-
-    open var selectedLineColor : UIColor = .black {
-        didSet{
-            border.borderColor = selectedLineColor.cgColor
-        }
-    }
-    
-    open var lineHeight : CGFloat = CGFloat(1.0) {
-        didSet{
-            border.frame = CGRect(x: 0, y: self.frame.size.height - lineHeight, width:  self.frame.size.width, height: self.frame.size.height)
-        }
-    }
+    var textCheckPublishSubject = PublishSubject<Bool>()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,15 +25,6 @@ class C_TextField: UITextField {
     }
     
     func setupUI() {
-        textContentType = .none
-        border.borderColor = lineColor.cgColor
-        self.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "",
-                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        
-        border.frame = CGRect(x: 0, y: self.frame.size.height - lineHeight, width:  self.frame.size.width, height: self.frame.size.height)
-        border.borderWidth = lineHeight
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
         
         self.autocorrectionType = .no
         self.autocapitalizationType = .none
@@ -62,19 +35,23 @@ class C_TextField: UITextField {
             self.smartDashesType = .no
             self.smartInsertDeleteType  = .no
         }
+
     }
+    
+    func bind(){
         
-    override func draw(_ rect: CGRect) {
-        border.frame = CGRect(x: 0, y: self.frame.size.height - lineHeight, width:  self.frame.size.width, height: self.frame.size.height)
+        self.rx.text
+            .subscribe { [weak self] _  in
+                self?.textCheckPublishSubject.onNext(self?.text?.count ?? 0 >= 5 ? true : false)
+            }
     }
-    
-    
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        border.borderColor = selectedLineColor.cgColor
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        border.borderColor = lineColor.cgColor
+        
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -83,5 +60,11 @@ class C_TextField: UITextField {
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: 30, dy: 0)
+    }
+}
+
+extension Reactive where Base: C_TextField{
+    var checkTextMinlength: Observable<Bool> {
+        return self.base.textCheckPublishSubject.asObserver()
     }
 }

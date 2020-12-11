@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoAddViewController" customModule="RxPractice" customModuleProvider="target">
             <connections>
+                <outlet property="mSaveBtn" destination="69r-aJ-2Fo" id="Gpr-IN-GRF"/>
                 <outlet property="mTextView" destination="4Ze-lM-tSg" id="VFy-Aa-usy"/>
                 <outlet property="mTitleField" destination="EzJ-P8-taf" id="oPe-9V-QUh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -33,7 +34,7 @@
                     <rect key="frame" x="24" y="164" width="366" height="668"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="18"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="inset">
@@ -41,17 +42,22 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69r-aJ-2Fo">
-                    <rect key="frame" x="339" y="787" width="60" height="60"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69r-aJ-2Fo" customClass="C_Button" customModule="RxPractice" customModuleProvider="target">
+                    <rect key="frame" x="319" y="767" width="80" height="80"/>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="60" id="L0x-WT-j7q"/>
-                        <constraint firstAttribute="height" constant="60" id="XO9-T3-o9p"/>
+                        <constraint firstAttribute="width" constant="80" id="L0x-WT-j7q"/>
+                        <constraint firstAttribute="height" constant="80" id="XO9-T3-o9p"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
-                    <state key="normal" title="저장">
+                    <state key="normal">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="mSaveBtnPressed:" destination="-1" eventType="touchUpInside" id="uge-Cn-Twn"/>
                     </connections>
