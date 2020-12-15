@@ -11,7 +11,16 @@ import RxSwift
 
 class C_TextField: UITextField {
     
-    var textCheckPublishSubject = PublishSubject<Bool>()
+    @IBInspectable open var radius : CGFloat = 0 {
+        didSet{
+            self.layer.cornerRadius = radius
+        }
+    }
+    
+    var getTextPublishSubject = PublishSubject<String?>()
+    var setTextPublishSubject = PublishSubject<String?>()
+    
+    private var disposeBag = DisposeBag()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,15 +44,21 @@ class C_TextField: UITextField {
             self.smartDashesType = .no
             self.smartInsertDeleteType  = .no
         }
+        
+        bind()
 
     }
     
     func bind(){
         
-        self.rx.text
-            .subscribe { [weak self] _  in
-                self?.textCheckPublishSubject.onNext(self?.text?.count ?? 0 >= 5 ? true : false)
-            }
+//        self.rx.text
+//            .subscribe { [weak self] _  in
+//                self?.textCheckPublishSubject.onNext(self?.text?.count ?? 0 >= 5 ? true : false)
+//            }
+        
+        getTextPublishSubject.subscribe { text in
+            self.text = text
+        }.disposed(by: disposeBag)
     }
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -64,7 +79,7 @@ class C_TextField: UITextField {
 }
 
 extension Reactive where Base: C_TextField{
-    var checkTextMinlength: Observable<Bool> {
-        return self.base.textCheckPublishSubject.asObserver()
-    }
+//    var checkTextMinlength: Observable<Bool> {
+//        return self.base.textCheckPublishSubject.asObserver()
+//    }
 }

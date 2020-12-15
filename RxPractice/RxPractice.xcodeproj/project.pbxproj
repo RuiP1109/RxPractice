@@ -296,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				F6C78FD32581BD77000EEF66 /* Model */,
+				F6C791C32588BE46000EEF66 /* View */,
 				F6C78FDE2581BEB9000EEF66 /* ViewModel */,
 				F6C78F8B25808960000EEF66 /* ViewController */,
 			);
@@ -328,6 +329,13 @@
 				F6C7906725830A52000EEF66 /* MemoDetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6C791C32588BE46000EEF66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

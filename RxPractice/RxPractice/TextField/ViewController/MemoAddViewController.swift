@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
 
 enum MemoAddViewBtnType {
     case add, modify
@@ -18,26 +19,19 @@ protocol MemoAddViewControllerDelegate : class{
 }
 
 class MemoAddViewController: C_ViewController {
-
-    @IBOutlet weak var mTitleField: C_TextField!
-    @IBOutlet weak var mTextView: C_TextView!
-    @IBOutlet weak var mSaveBtn: C_Button!
+    
+    @IBOutlet private weak var mTitleField: C_TextField!
+    @IBOutlet private weak var mTextView: C_TextView!
+    @IBOutlet private weak var mSaveBtn: C_Button!
+    
+    private var disposeBag = DisposeBag()
     
     private var model : MemoDetailObject?
     weak var delegate : MemoAddViewControllerDelegate?
     
-    var type : MemoAddViewBtnType = .add {
-        didSet{
-            switch type {
-            case .add:
-                mSaveBtn.setTitle("저장", for: .normal)
-            case .modify:
-                mSaveBtn.setTitle("수정", for: .normal)
-            }
-        }
-    }
-
-//    private lazy var memoMainViewModel = MemoMainViewModel(parent: self)
+    var type : MemoAddViewBtnType = .add
+    
+    //    private lazy var memoMainViewModel = MemoMainViewModel(parent: self)
     
     init(delegate : MemoAddViewControllerDelegate) {
         super.init()
@@ -58,23 +52,22 @@ class MemoAddViewController: C_ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mTitleField.layer.cornerRadius = 30
-        mTitleField.placeholder = "제목 입력"
-        mTextView.layer.cornerRadius = 10
-        
         setUI()
-
+        
     }
     
     func setUI(){
+        mSaveBtn.setTitle(type == .add ? "저장" : "수정" , for: .normal)
         
-        if model == nil{
-            return
-        }
+        bind()
         
-        mTitleField.text = model?.title
-        mTextView.text = model?.content
-        
+    }
+    
+    func bind(){
+        mTitleField.getTextPublishSubject
+            .onNext(model?.title)
+        mTextView.getTextPublishSubject
+            .onNext(model?.content)
     }
     
     @IBAction func mSaveBtnPressed(_ sender: UIButton) {

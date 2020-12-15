@@ -39,7 +39,8 @@ class MemoMainViewModel{
     }
     
     func deleteModelInfo(_ index : Int){
-        let model = realm.objects(MemoDetailObject.self)[index]
+        print("🍎index : \(index)")
+        let model = realm.objects(MemoDetailObject.self).sorted(byKeyPath: "lastEditDate", ascending: false)[index]
         
         try! realm.write {
             realm.delete(model)
@@ -55,7 +56,7 @@ class MemoMainViewModel{
         print("💙model : \(model.title)")
         let viewCon = MemoAddViewController.init(delegate: self,
                                                  model: model)
-        parent?.present(viewCon, animated: true, completion: nil)
+        parent?.navigationController?.pushViewController(viewCon, animated: true)
     }
     
 }
@@ -72,7 +73,6 @@ extension MemoMainViewModel : MemoAddViewControllerDelegate{
         try! realm.write {
             realm.add(data)
         }
-        
         parent?.dismiss(animated: true, completion: nil)
     }
     
@@ -87,7 +87,7 @@ extension MemoMainViewModel : MemoAddViewControllerDelegate{
             newObject?.lastEditDate = getCurrentDate()
         }
         
-        parent?.dismiss(animated: true, completion: nil)
+        parent?.navigationController?.popViewController(animated: true)
     }
     
     func getCurrentDate() -> String{
@@ -102,10 +102,6 @@ extension MemoMainViewModel : MemoAddViewControllerDelegate{
 extension MemoMainViewModel : ReactiveCompatible {}
 
 extension Reactive where Base: MemoMainViewModel {
-//    var list: Observable<Array<Any>>{
-//        return self.base.listModelPublishSubject.asObserver()
-//    }
-    
     var delete : Observable<Int>{
         return self.base.deletePublishSubject.asObservable() //asObserver()
     }

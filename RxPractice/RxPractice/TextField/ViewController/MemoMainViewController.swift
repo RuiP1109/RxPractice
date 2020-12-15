@@ -30,20 +30,7 @@ class MemoMainViewController: C_ViewController {
         notificationToken = model.observe({ _ in
             self.mTableView.reloadData()
         })
-        
-//        notificationToken = realm.observe { [unowned self] _, _ in
-//            memoMainViewModel.rx.isUpdate
-//                .subscribe { [weak self] isUpdate in
-//                    self?.needUpdate(isUpdate)
-//                }
-//        }
     }
-//
-//    func needUpdate(_ isUpdate : Bool){
-//        if isUpdate == true {
-//            mTableView.reloadData()
-//        }
-//    }
     
     @IBAction func mAddBtnPressed(_ sender: UIButton) {
         memoMainViewModel.pushAddViewCon()
